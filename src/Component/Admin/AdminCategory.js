@@ -41,7 +41,7 @@ const AdminCategory = () => {
         },
         {
             name: "image",
-            selector: (row) => <img src={row.image} alt='' width={"60px"} height={"60px"} className='rounded object-fit-cover ' />
+            selector: (row) => <img src={row.image} alt='' width={"60px"} height={"60px"} className='rounded object-fit-contain ' />
         },
         {
             name: "name",

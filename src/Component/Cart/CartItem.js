@@ -56,7 +56,7 @@ const CartItem = ({ cartProducts }) => {
                                         </td>
                                         <td >
                                             <img src={`${baseUrlImage}${items.product.imageCover || img1}`} alt=''
-                                                width={"80px"} height={"100px"} className='rounded object-fit-cover ' />
+                                                width={"80px"} height={"100px"} className='rounded object-fit-contain ' />
                                         </td>
                                         <td>{items.product.title}</td>
                                         <td>${items.price}</td>

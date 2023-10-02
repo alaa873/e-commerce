@@ -36,7 +36,7 @@ const ProductText = () => {
             </Row>
             <div className='d-flex align-items-center '>
                 <p className='price me-5 m-0'>$ {item.price}</p>
-                <del className='after-price'>$12800</del>
+                {/* <del className='after-price'>$12800</del> */}
             </div>
             <div className=' d-flex  '>
                 <ul className='d-flex me-3  m-0 p-0'>

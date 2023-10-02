@@ -76,7 +76,7 @@ const NavBar = () => {
                                     }
 
                                     <NavDropdown.Divider />
-                                    <NavDropdown.Item onClick={logOut} href="#action/3.4">Logout </NavDropdown.Item>
+                                    <NavDropdown.Item onClick={logOut} href="">Logout </NavDropdown.Item>
                                 </NavDropdown>) : (<Link to="/login" className='d-flex me-3 flex-column justify-content-center icon-box '>
                                     <FontAwesomeIcon icon={faUser} className='nav-icon' />
                                     <span className='icon-name'>Login</span>
@@ -84,11 +84,11 @@ const NavBar = () => {
                             }
 
                             {
-                                userData.role === "admin" ? null : <Link to='/cart' className='d-flex  me-3 flex-column justify-content-center  icon-box'>
+                                userData.role === "user" ? <Link to='/cart' className='d-flex  me-3 flex-column justify-content-center  icon-box'>
                                     <FontAwesomeIcon icon={faBagShopping} className='nav-icon ' />
                                     <span className='order-count'>{cartNumbers}</span>
                                     <span className='icon-name'>My Cart</span>
-                                </Link>
+                                </Link> : null
                             }
 
                         </div>

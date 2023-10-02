@@ -39,7 +39,7 @@ const AdminProducts = () => {
         },
         {
             name: "image",
-            selector: (row) => <img src={row.imageCover} alt='' width={"60px"} height={"60px"} className='rounded object-fit-cover ' />
+            selector: (row) => <img src={row.imageCover} alt='' width={"60px"} height={"60px"} className='rounded object-fit-contain ' />
         },
         {
             name: "name",

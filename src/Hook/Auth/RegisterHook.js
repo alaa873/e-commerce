@@ -45,6 +45,10 @@ const RegisterHook = () => {
             notify("Please enter valid mobile number", "warn");
             return;
         }
+        if (password.length < 6) {
+            notify('Your password length less than 6', "error");
+            return;
+        }
         if (password !== passwordConfirm) {
             notify('Your password and confirm password not match', "error");
             return;
@@ -71,18 +75,17 @@ const RegisterHook = () => {
 
                 if (res.data.token) {
                     localStorage.setItem("token", res.data.token)
-                    console.log(res.data.token)
                     notify("An account has been created successfully", "success")
                     setTimeout(() => {
                         navigate('/login')
                     }, 1500);
                 }
                 if (res.data.errors) {
+                    console.log(res)
                     if (res.data.errors[0].msg === "E-mail already in use") {
-                        console.log("use")
+                        notify("E-mail already in use", "error")
                     }
 
-                    notify("E-mail already in use", "error")
                 }
                 if (res.data.errors) {
                     if (res.data.errors[0].msg === "must be at least 3 chars")
