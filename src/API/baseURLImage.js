@@ -1,0 +1,1 @@
+export const baseUrlImage = "https://kind-blue-rooster-hem.cyclic.cloud/products/"
