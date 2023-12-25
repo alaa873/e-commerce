@@ -48,7 +48,7 @@ const Add_To_Cart_Hook = (proId, item) => {
                 setTimeout(() => {
                     window.location.reload(false)
                 }, 1000);
-            } else {
+            } else if (res.status !== 200) {
                 notify("Please log in first", "error")
                 return;
             }

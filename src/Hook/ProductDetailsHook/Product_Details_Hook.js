@@ -14,7 +14,7 @@ const Product_Details_Hook = (id) => {
     const productLike = useSelector(state => state.product.productLike)
     const oneCategory = useSelector(state => state.category.oneCategory)
     const oneBrand = useSelector(state => state.brand.oneBrand)
-    //get all products
+    //get one products
     let item = []
     try {
         if (product.data)

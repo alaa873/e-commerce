@@ -81,7 +81,6 @@ const RegisterHook = () => {
                     }, 1500);
                 }
                 if (res.data.errors) {
-                    console.log(res)
                     if (res.data.errors[0].msg === "E-mail already in use") {
                         notify("E-mail already in use", "error")
                     }

@@ -23,7 +23,7 @@ const Reset_Password_Hook = () => {
             notify("من فضلك ادخل كلمة السر", "error")
             return
         }
-        if (password != confirmPassword) {
+        if (password !== confirmPassword) {
             notify("كلمة السر غير متطابقه مع تاكيد كلمع السر", "error")
             return
         }
@@ -41,7 +41,6 @@ const Reset_Password_Hook = () => {
     useEffect(() => {
         if (loading === false) {
             if (res) {
-                console.log(res)
                 if (res.data.status === "Success") {
                     notify("تم تغير كلمة السر بنجاح", "success")
                     setTimeout(() => {

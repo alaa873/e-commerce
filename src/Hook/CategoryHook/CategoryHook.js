@@ -7,6 +7,7 @@ const CategoryHook = () => {
     useEffect(() => {
         dispatch(getCategory(20))
     }, []);
+
     const category = useSelector(state => state.category.allCategory)
     const loading = useSelector(state => state.category.loading)
     let pageCount = 0;
